@@ -7,4 +7,4 @@
   - Category CRUD operation
   - one to Many relation
 
-### postman API collection on [a relative link](/postman/collection)
+### postman API collection on [a relative link](./postman/collection)
