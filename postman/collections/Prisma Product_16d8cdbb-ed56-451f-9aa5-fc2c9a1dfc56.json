@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "b7dfe729-69ee-4982-bfe4-beee5f4606b7",
+		"name": "Prisma Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"id": "a4d950fb-2e52-4434-832d-4c6a08027883",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/products",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "4b2347f8-3875-416d-a184-ac62e499e480",
+					"name": "Get All Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"product one\",\r\n        \"price\": 90,\r\n        \"createdAt\": \"2022-06-12T08:50:36.015Z\",\r\n        \"categoryId\": 1,\r\n        \"category\": {\r\n            \"id\": 1,\r\n            \"name\": \"cat\",\r\n            \"createdAt\": \"2022-06-12T09:07:52.666Z\"\r\n        }\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"name\": \"test product\",\r\n        \"price\": 431,\r\n        \"createdAt\": \"2022-06-12T09:27:39.240Z\",\r\n        \"categoryId\": null,\r\n        \"category\": null\r\n    },\r\n    {\r\n        \"id\": 3,\r\n        \"name\": \"bla bla\",\r\n        \"price\": 22,\r\n        \"createdAt\": \"2022-06-12T09:28:20.222Z\",\r\n        \"categoryId\": 1,\r\n        \"category\": {\r\n            \"id\": 1,\r\n            \"name\": \"cat\",\r\n            \"createdAt\": \"2022-06-12T09:07:52.666Z\"\r\n        }\r\n    }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "Create New Products",
+			"id": "3f3b3b16-9628-4d76-82fc-4aab6f31c92b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"bla2 bla\",\r\n    \"price\": 3432,\r\n    \"categoryId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/products",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "82420246-e3f2-4ac0-bee5-1eeb62fb38dd",
+					"name": "Create New Products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"bla bla\",\r\n    \"price\": 22,\r\n    \"categoryId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"message\": \"Product successfully created!\",\r\n    \"newProduct\": {\r\n        \"id\": 4,\r\n        \"name\": \"bla2 bla\",\r\n        \"price\": 3432,\r\n        \"createdAt\": \"2022-06-12T09:38:18.336Z\",\r\n        \"categoryId\": 1\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Product By ID",
+			"id": "47cad1be-634b-4ad0-82c7-f81b825f4a13",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/products/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "4dfeb88c-3da3-447f-b90a-715a54dbd8d9",
+					"name": "Get Product By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/products/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"id\": 1,\r\n    \"name\": \"product one\",\r\n    \"price\": 90,\r\n    \"createdAt\": \"2022-06-12T08:50:36.015Z\",\r\n    \"categoryId\": 1,\r\n    \"category\": {\r\n        \"id\": 1,\r\n        \"name\": \"cat\",\r\n        \"createdAt\": \"2022-06-12T09:07:52.666Z\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Product  By ID",
+			"id": "d66ee765-5755-4718-922d-f507ed0e2ea3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/products/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"id": "65f578f6-6592-4509-a0a2-a098492a9575",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":233\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/products/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "e7e25a45-9bf0-483b-b7b7-7b7eb908b2a2",
+					"name": "Update Product",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":233\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/products/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"message\": \"Product successfully updated!\",\r\n    \"updateProduct\": {\r\n        \"id\": 1,\r\n        \"name\": \"product one\",\r\n        \"price\": 233,\r\n        \"createdAt\": \"2022-06-12T08:50:36.015Z\",\r\n        \"categoryId\": 1,\r\n        \"category\": {\r\n            \"id\": 1,\r\n            \"name\": \"cat\",\r\n            \"createdAt\": \"2022-06-12T09:07:52.666Z\"\r\n        }\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Categories",
+			"id": "760b5788-4b4f-488f-ba82-17065ecda543",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/category",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "419ec52b-c8d2-4016-aa1d-5efe532b6a20",
+					"name": "Get All Categories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"cat\",\r\n        \"createdAt\": \"2022-06-12T09:07:52.666Z\",\r\n        \"products\": [\r\n            {\r\n                \"id\": 1,\r\n                \"name\": \"product one\",\r\n                \"price\": 90,\r\n                \"createdAt\": \"2022-06-12T08:50:36.015Z\",\r\n                \"categoryId\": 1\r\n            },\r\n            {\r\n                \"id\": 3,\r\n                \"name\": \"bla bla\",\r\n                \"price\": 22,\r\n                \"createdAt\": \"2022-06-12T09:28:20.222Z\",\r\n                \"categoryId\": 1\r\n            }\r\n        ]\r\n    }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Category by ID",
+			"id": "88b658f8-a52d-402f-ab0d-22a7b01d9f7f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/category/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "f77b5545-8f77-49c2-934d-62e36f1c2ec1",
+					"name": "Get Category by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/category/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"2"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"id\": 2,\r\n    \"name\": \"category one\",\r\n    \"createdAt\": \"2022-06-12T10:51:12.384Z\",\r\n    \"products\": []\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Create New Category",
+			"id": "fb2d4011-0df5-4c03-83c1-40b13b88709c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"category one\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/category",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "e8241db6-63a4-4da9-a946-1767c6a2fe7f",
+					"name": "Create New Category",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category one\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"message\": \"Category successfully created!\",\r\n    \"newCategory\": {\r\n        \"id\": 2,\r\n        \"name\": \"category one\",\r\n        \"createdAt\": \"2022-06-12T10:51:12.384Z\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Category By ID",
+			"id": "af7686b9-b794-4aa7-b4bc-d56d60d26730",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Category test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/category/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "40ed7c67-b13f-4a32-ae7f-34250f29919c",
+					"name": "Update Category By ID",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Category test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/category/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"2"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"message\": \"Category successfully updated!\",\r\n    \"updateCategory\": {\r\n        \"id\": 2,\r\n        \"name\": \"Category test\",\r\n        \"createdAt\": \"2022-06-12T10:51:12.384Z\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Category By ID",
+			"id": "6755f574-0d40-4340-9662-38f9eb750439",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/category/3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "0d860569-19ad-414a-b0ee-c83fbbd763b1",
+					"name": "Delete Category By ID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/category/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"3"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\r\n    \"message\": \"Category successfully deleted!\"\r\n}"
+				}
+			]
+		}
+	]
+}
